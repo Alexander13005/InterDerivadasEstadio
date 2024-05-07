@@ -71,4 +71,37 @@
         Console.WriteLine("               *  *                                             *      *");
         Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   *"); Console.WriteLine(" ");
     }
+    static void mostrarasientos()
+    {
+        Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("    5       4       3       2       1"); Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("*   *   *");
+        Console.WriteLine("*  37   *");
+        Console.WriteLine("*   *   *   *   *");
+        Console.WriteLine("*  38   *  25   *");
+        Console.WriteLine("*   *   *   *   *   *   *");
+        Console.WriteLine("*  39   *  26   *  15   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  40   *  27   *  16   *   7   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  41   *  28   *  17   *   8   *   1   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  42   *  29   *  18   *   9   *   2   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  43   *  30   *  19   *  10   *   3   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  44   *  31   *  20   *  11   *   4   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  45   *  32   *  21   *  12   *   5   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  46   *  33   *  22   *  13   *   6   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  47   *  34   *  23   *  14   *");
+        Console.WriteLine("*   *   *   *   *   *   *   *   *");
+        Console.WriteLine("*  48   *  35   *  24   *");
+        Console.WriteLine("*   *   *   *   *   *   *");
+        Console.WriteLine("*  49   *  36   *");
+        Console.WriteLine("*   *   *   *   *");
+        Console.WriteLine("*  50   *");
+        Console.WriteLine("*   *   *");
+    }
 }
