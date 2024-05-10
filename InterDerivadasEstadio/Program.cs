@@ -18,7 +18,7 @@
         while (ent1 != entradas)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("   0 1 2 3 4 5 6 7 8 9"); Console.WriteLine(" ");
+            Console.WriteLine("   0 1 2 3 4 5 6 7 8 9 \n");
             Console.ForegroundColor = ConsoleColor.Blue; Console.Write("0"); Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(" " + " " + asientos[0, 0] + " " + asientos[0, 1] + " " + asientos[0, 2] + " " + asientos[0, 3] + " " + asientos[0, 4] + " " + asientos[0, 5] + " " + asientos[0, 6] + " " + asientos[0, 7] + " " + asientos[0, 8] + " " + asientos[0, 9]); Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Blue; Console.Write("1"); Console.ForegroundColor = ConsoleColor.White;
@@ -29,7 +29,7 @@
             Console.WriteLine(" " + " " + asientos[3, 0] + " " + asientos[3, 1] + " " + asientos[3, 2] + " " + asientos[3, 3] + " " + asientos[3, 4] + " " + asientos[3, 5] + " " + asientos[3, 6] + " " + asientos[3, 7] + " " + asientos[3, 8] + " " + asientos[3, 9]); Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Blue; Console.Write("4"); Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(" " + " " + asientos[4, 0] + " " + asientos[4, 1] + " " + asientos[4, 2] + " " + asientos[4, 3] + " " + asientos[4, 4] + " " + asientos[4, 5] + " " + asientos[4, 6] + " " + asientos[4, 7] + " " + asientos[4, 8] + " " + asientos[4, 9]); Console.WriteLine(" ");
-            Console.WriteLine("1 Significa Ocupado, 0 Significa Vacío"); Console.WriteLine(" ");
+            Console.WriteLine("1 Significa Ocupado, 0 Significa Vacío \n");
             while (f >= 5 | f <= -1)
             {
                 Console.Write("Ingrese el número de fila que desea comprar "); f = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
@@ -40,14 +40,14 @@
             }
             if (asientos[f, c] == 1)
             {
-                Console.WriteLine("Asiento Ocupado"); Console.WriteLine(" ");
+                Console.WriteLine("Asiento Ocupado \n");
             }
             if (asientos[f, c] == 0)
             {
-                Console.WriteLine("Asiento asignado correctamente"); Console.WriteLine(" "); asientos[f, c] = 1; ent1++;
+                Console.WriteLine("Asiento asignado correctamente \n"); asientos[f, c] = 1; ent1++;
             }
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("   0 1 2 3 4 5 6 7 8 9"); Console.WriteLine(" ");
+            Console.WriteLine("   0 1 2 3 4 5 6 7 8 9 \n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("0" + " " + " " + asientos[0, 0] + " " + asientos[0, 1] + " " + asientos[0, 2] + " " + asientos[0, 3] + " " + asientos[0, 4] + " " + asientos[0, 5] + " " + asientos[0, 6] + " " + asientos[0, 7] + " " + asientos[0, 8] + " " + asientos[0, 9]); Console.WriteLine(" ");
             Console.WriteLine("1" + " " + " " + asientos[1, 0] + " " + asientos[1, 1] + " " + asientos[1, 2] + " " + asientos[1, 3] + " " + asientos[1, 4] + " " + asientos[1, 5] + " " + asientos[1, 6] + " " + asientos[1, 7] + " " + asientos[1, 8] + " " + asientos[1, 9]); Console.WriteLine(" ");
@@ -92,7 +92,7 @@
     }
     public static void Main(string[] args)
     {
-        Console.WriteLine("Bienvenido al Derivadas Arena"); Console.WriteLine(" "); Console.WriteLine("Está comprando entradas para el partido Inter Derivadas vs Integrales FC"); Console.WriteLine(" ");
+        Console.WriteLine("Bienvenido al Derivadas Arena \n"); Console.WriteLine("Está comprando entradas para el partido Inter Derivadas vs Integrales FC \n"); Console.WriteLine("Día del partido: Sábado 8 de junio     Hora: 6:00 pm \n");
         Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   *");
         Console.WriteLine("               *  *                                             *      *");
         Console.WriteLine("            *      *                                           *          *");
@@ -114,6 +114,6 @@
         Console.WriteLine("         *          *                    4                    *              *");
         Console.WriteLine("            *      *                                           *          *");
         Console.WriteLine("               *  *                                             *      *");
-        Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   *"); Console.WriteLine(" ");
+        Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   * \n");
     }
 }
