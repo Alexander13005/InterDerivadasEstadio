@@ -57,6 +57,48 @@
             f = 100; c = 100;
         }
     }
+    static void switchsector()
+    {
+        int sector = 0;
+        int seccion = 0;
+        while (sector >= 6 | sector <= 0)
+        {
+            Console.Write("Ingrese el sector que desea comprar: "); sector = int.Parse(Console.ReadLine());
+        }
+        switch (sector)
+        {
+            case 5:
+                while (seccion >= 51 | seccion <= 36)
+                {
+                    Console.Write("Ingrese la sección que desea comprar: "); seccion = int.Parse(Console.ReadLine());
+                }
+                break;
+            case 4:
+                while (seccion >= 37 | seccion <= 24)
+                {
+                    Console.Write("Ingrese la sección que desea comprar: "); seccion = int.Parse(Console.ReadLine());
+                }
+                break;
+            case 3:
+                while (seccion >= 25 | seccion <= 14)
+                {
+                    Console.Write("Ingrese la sección que desea comprar: "); seccion = int.Parse(Console.ReadLine());
+                }
+                break;
+            case 2:
+                while (seccion >= 15 | seccion <= 6)
+                {
+                    Console.Write("Ingrese la sección que desea comprar: "); seccion = int.Parse(Console.ReadLine());
+                }
+                break;
+            case 1:
+                while (seccion >= 7 | seccion <= 0)
+                {
+                    Console.Write("Ingrese la sección que desea comprar: "); seccion = int.Parse(Console.ReadLine());
+                }
+                break;
+        }
+    }
     static void mostrarasientos()
     {
         Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("    5       4       3       2       1"); Console.ForegroundColor = ConsoleColor.White;
