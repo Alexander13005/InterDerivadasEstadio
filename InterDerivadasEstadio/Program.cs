@@ -134,6 +134,10 @@
     }
     public static void Main(string[] args)
     {
+        int zona = 0;
+        int sector = 0;
+        int seccion = 0;
+        int f, c;
         Console.WriteLine("Bienvenido al Derivadas Arena \n"); Console.WriteLine("Está comprando entradas para el partido Inter Derivadas vs Integrales FC \n"); Console.WriteLine("Día del partido: Sábado 8 de junio     Hora: 6:00 pm \n");
         Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   *");
         Console.WriteLine("               *  *                                             *      *");
@@ -157,5 +161,52 @@
         Console.WriteLine("            *      *                                           *          *");
         Console.WriteLine("               *  *                                             *      *");
         Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   * \n");
+        while (zona >= 5 | zona <= 0)
+        {
+            Console.Write("Ingrese el número de la zona en la que desea comprar los boletos: "); zona = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+        }
+        switch (zona)
+        {
+            case 1:
+                Console.WriteLine("Usted ha escogido la zona 1\n");
+                Console.WriteLine("La lista de precios para esta zona es:\n");
+                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $7.50"); Console.WriteLine("Sector 3 ............ $10.00"); Console.WriteLine("Sector 2 ............ $12.50"); Console.WriteLine("Sector 1 ............ $15.00 \n");
+                mostrarasientos();
+                Console.WriteLine(" ");
+                switchsector();
+                Console.WriteLine(" ");
+                asientos();
+                break;
+            case 2:
+                Console.WriteLine("Usted ha escogido la zona 2 \n");
+                Console.WriteLine("La lista de precios para esta zona es: \n");
+                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $10.00"); Console.WriteLine("Sector 3 ............ $15.00"); Console.WriteLine("Sector 2 ............ $20.00"); Console.WriteLine("Sector 1 ............ $25.00 \n");
+                mostrarasientos();
+                Console.WriteLine(" ");
+                switchsector();
+                Console.WriteLine(" ");
+                asientos();
+                break;
+            case 3:
+                Console.WriteLine("Usted ha escogido la zona 3 \n");
+                Console.WriteLine("La lista de precios para esta zona es: \n");
+                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $7.50"); Console.WriteLine("Sector 3 ............ $10.00"); Console.WriteLine("Sector 2 ............ $12.50"); Console.WriteLine("Sector 1 ............ $15.00 \n");
+                mostrarasientos();
+                Console.WriteLine(" ");
+                switchsector();
+                Console.WriteLine(" ");
+                asientos();
+                break;
+            case 4:
+                Console.WriteLine("Usted ha escogido la zona 4 \n");
+                Console.WriteLine("La lista de precios para esta zona es: \n");
+                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $10.00"); Console.WriteLine("Sector 3 ............ $15.00"); Console.WriteLine("Sector 2 ............ $20.00"); Console.WriteLine("Sector 1 ............ $25.00 \n");
+                mostrarasientos();
+                Console.WriteLine(" ");
+                switchsector();
+                Console.WriteLine(" ");
+                asientos();
+                break;
+        }
     }
 }
