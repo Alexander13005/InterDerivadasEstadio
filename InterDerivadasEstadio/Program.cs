@@ -13,10 +13,11 @@
         asientos[4, 0] = num; num = a.Next(0, 2); asientos[4, 1] = num; num = a.Next(0, 2); asientos[4, 2] = num; num = a.Next(0, 2); asientos[4, 3] = num; num = a.Next(0, 2); asientos[4, 4] = num; num = a.Next(0, 2); asientos[4, 5] = num; num = a.Next(0, 2); asientos[4, 6] = num; num = a.Next(0, 2); asientos[4, 7] = num; num = a.Next(0, 2); asientos[4, 8] = num; num = a.Next(0, 2); asientos[4, 9] = num; num = a.Next(0, 2);
         while (entradas >= 6 | entradas <= 0)
         {
-            Console.WriteLine("¿Cuántas entradas desea comprar? (Máximo 5 entradas) "); entradas = int.Parse(Console.ReadLine());
+            Console.Write("¿Cuántas entradas desea comprar? (Máximo 5 entradas) "); entradas = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
         }
         while (ent1 != entradas)
         {
+            Console.WriteLine("Esta es la disponibilidad de los asientos"); Console.WriteLine(" ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("   0 1 2 3 4 5 6 7 8 9 \n");
             Console.ForegroundColor = ConsoleColor.Blue; Console.Write("0"); Console.ForegroundColor = ConsoleColor.White;
