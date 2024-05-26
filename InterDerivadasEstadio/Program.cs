@@ -1,20 +1,16 @@
 ﻿class Estadio
 {
-    static void asientos()
+    static void asientos(int entradas)
     {
         Random a = new Random();
         int num = a.Next(0, 2); int num1 = a.Next(0, 2); int num2 = a.Next(0, 2); int num3 = a.Next(0, 2); int num4 = a.Next(0, 2); int num5 = a.Next(0, 2);
         int[,] asientos = new int[5, 10];
-        int f = 100, c = 100, entradas = 0, ent1 = 0;
+        int f = 100, c = 100, ent1 = 0;
         asientos[0, 0] = num; num = a.Next(0, 2); asientos[0, 1] = num; num = a.Next(0, 2); asientos[0, 2] = num; num = a.Next(0, 2); asientos[0, 3] = num; num = a.Next(0, 2); asientos[0, 4] = num; num = a.Next(0, 2); asientos[0, 5] = num; num = a.Next(0, 2); asientos[0, 6] = num; num = a.Next(0, 2); asientos[0, 7] = num; num = a.Next(0, 2); asientos[0, 8] = num; num = a.Next(0, 2); asientos[0, 9] = num; num = a.Next(0, 2);
         asientos[1, 0] = num; num = a.Next(0, 2); asientos[1, 1] = num; num = a.Next(0, 2); asientos[1, 2] = num; num = a.Next(0, 2); asientos[1, 3] = num; num = a.Next(0, 2); asientos[1, 4] = num; num = a.Next(0, 2); asientos[1, 5] = num; num = a.Next(0, 2); asientos[1, 6] = num; num = a.Next(0, 2); asientos[1, 7] = num; num = a.Next(0, 2); asientos[1, 8] = num; num = a.Next(0, 2); asientos[1, 9] = num; num = a.Next(0, 2);
         asientos[2, 0] = num; num = a.Next(0, 2); asientos[2, 1] = num; num = a.Next(0, 2); asientos[2, 2] = num; num = a.Next(0, 2); asientos[2, 3] = num; num = a.Next(0, 2); asientos[2, 4] = num; num = a.Next(0, 2); asientos[2, 5] = num; num = a.Next(0, 2); asientos[2, 6] = num; num = a.Next(0, 2); asientos[2, 7] = num; num = a.Next(0, 2); asientos[2, 8] = num; num = a.Next(0, 2); asientos[2, 9] = num; num = a.Next(0, 2);
         asientos[3, 0] = num; num = a.Next(0, 2); asientos[3, 1] = num; num = a.Next(0, 2); asientos[3, 2] = num; num = a.Next(0, 2); asientos[3, 3] = num; num = a.Next(0, 2); asientos[3, 4] = num; num = a.Next(0, 2); asientos[3, 5] = num; num = a.Next(0, 2); asientos[3, 6] = num; num = a.Next(0, 2); asientos[3, 7] = num; num = a.Next(0, 2); asientos[3, 8] = num; num = a.Next(0, 2); asientos[3, 9] = num; num = a.Next(0, 2);
         asientos[4, 0] = num; num = a.Next(0, 2); asientos[4, 1] = num; num = a.Next(0, 2); asientos[4, 2] = num; num = a.Next(0, 2); asientos[4, 3] = num; num = a.Next(0, 2); asientos[4, 4] = num; num = a.Next(0, 2); asientos[4, 5] = num; num = a.Next(0, 2); asientos[4, 6] = num; num = a.Next(0, 2); asientos[4, 7] = num; num = a.Next(0, 2); asientos[4, 8] = num; num = a.Next(0, 2); asientos[4, 9] = num; num = a.Next(0, 2);
-        while (entradas >= 6 | entradas <= 0)
-        {
-            Console.Write("¿Cuántas entradas desea comprar? (Máximo 5 entradas) "); entradas = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
-        }
         while (ent1 != entradas)
         {
             Console.WriteLine("Esta es la disponibilidad de los asientos"); Console.WriteLine(" ");
@@ -58,14 +54,9 @@
             f = 100; c = 100;
         }
     }
-    static void switchsector()
+    static void switchsector(int sector)
     {
-        int sector = 0;
         int seccion = 0;
-        while (sector >= 6 | sector <= 0)
-        {
-            Console.Write("Ingrese el sector que desea comprar: "); sector = int.Parse(Console.ReadLine());
-        }
         switch (sector)
         {
             case 5:
@@ -135,79 +126,167 @@
     }
     public static void Main(string[] args)
     {
-        int zona = 0;
-        int sector = 0;
-        int seccion = 0;
-        int f, c;
-        Console.WriteLine("Bienvenido al Derivadas Arena \n"); Console.WriteLine("Está comprando entradas para el partido Inter Derivadas vs Integrales FC \n"); Console.WriteLine("Día del partido: Sábado 8 de junio     Hora: 6:00 pm \n");
-        Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   *");
-        Console.WriteLine("               *  *                                             *      *");
-        Console.WriteLine("            *      *                                           *          *");
-        Console.WriteLine("         *          *                    2                    *              *");
-        Console.WriteLine("       *             *                                       *                 *");
-        Console.WriteLine("     *                *                                     *                    *");
-        Console.Write("   *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                   *   *   *   *   *   *   *   *   *   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                       *");
-        Console.WriteLine("  *                                                                                 *");
-        Console.Write(" *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                     *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                          *");
-        Console.WriteLine("*                                                                                     *");
-        Console.Write("*"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                      *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                          *");
-        Console.WriteLine("*        1                                                                3           *");
-        Console.Write("*"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                      *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                          *");
-        Console.WriteLine("*                                                                                     *");
-        Console.Write(" *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                     *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                         *");
-        Console.Write("  *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                    *   *   *   *   *   *   *   *   *   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                       *");
-        Console.WriteLine("     *                *                                     *                    *");
-        Console.WriteLine("       *             *                                       *                 *");
-        Console.WriteLine("         *          *                    4                    *              *");
-        Console.WriteLine("            *      *                                           *          *");
-        Console.WriteLine("               *  *                                             *      *");
-        Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   * \n");
-        while (zona >= 5 | zona <= 0)
+        string opt = "si";  
+        int zona = 0; int sector = 0; int seccion = 0; int  entradas = 0; int contador = 5; int f, c;
+        while (opt == "si" && contador != 0)
         {
-            Console.Write("Ingrese el número de la zona en la que desea comprar los boletos: "); zona = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+            Console.WriteLine("Bienvenido al Derivadas Arena \n"); Console.WriteLine("Está comprando entradas para el partido Inter Derivadas vs Integrales FC \n"); Console.WriteLine("Día del partido: Sábado 8 de junio     Hora: 6:00 pm \n");
+            Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   *");
+            Console.WriteLine("               *  *                                             *      *");
+            Console.WriteLine("            *      *                                           *          *");
+            Console.WriteLine("         *          *                    2                    *              *");
+            Console.WriteLine("       *             *                                       *                 *");
+            Console.WriteLine("     *                *                                     *                    *");
+            Console.Write("   *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                   *   *   *   *   *   *   *   *   *   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                       *");
+            Console.WriteLine("  *                                                                                 *");
+            Console.Write(" *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                     *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                          *");
+            Console.WriteLine("*                                                                                     *");
+            Console.Write("*"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                      *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                          *");
+            Console.WriteLine("*        1                                                                3           *");
+            Console.Write("*"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                      *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                          *");
+            Console.WriteLine("*                                                                                     *");
+            Console.Write(" *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                     *                                   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                         *");
+            Console.Write("  *"); Console.ForegroundColor = ConsoleColor.Green; Console.Write("                    *   *   *   *   *   *   *   *   *   *"); Console.ForegroundColor = ConsoleColor.White; Console.WriteLine("                       *");
+            Console.WriteLine("     *                *                                     *                    *");
+            Console.WriteLine("       *             *                                       *                 *");
+            Console.WriteLine("         *          *                    4                    *              *");
+            Console.WriteLine("            *      *                                           *          *");
+            Console.WriteLine("               *  *                                             *      *");
+            Console.WriteLine("                   *   *   *   *   *   *   *   *   *   *   *   *   * \n");
+            while (zona >= 5 | zona <= 0)
+            {
+                Console.Write("Ingrese el número de la zona en la que desea comprar los boletos: "); zona = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+            }
+            switch (zona)
+            {
+                case 1:
+                    Console.WriteLine("Usted ha escogido la zona 1\n");
+                    Console.WriteLine("La lista de precios para esta zona es:\n");
+                    Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $7.50"); Console.WriteLine("Sector 3 ............ $10.00"); Console.WriteLine("Sector 2 ............ $12.50"); Console.WriteLine("Sector 1 ............ $15.00 \n");
+                    mostrarasientos();
+                    while (sector >= 6 | sector <= 0)
+                    {
+                        Console.Write("Ingrese el sector que desea comprar: "); sector = int.Parse(Console.ReadLine());
+                    }
+                    switchsector(sector);
+                    while (entradas > contador | entradas <= 0)
+                    {
+                        Console.Write("¿Cuántas entradas desea comprar? (Máximo " + contador + " entradas) "); entradas = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+                    }
+                    contador = contador - entradas;
+                    asientos(entradas);
+                    Console.WriteLine(" ");
+                    pago(zona, sector, entradas);
+                    break;
+                case 2:
+                    Console.WriteLine("Usted ha escogido la zona 2 \n");
+                    Console.WriteLine("La lista de precios para esta zona es: \n");
+                    Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $10.00"); Console.WriteLine("Sector 3 ............ $15.00"); Console.WriteLine("Sector 2 ............ $20.00"); Console.WriteLine("Sector 1 ............ $25.00 \n");
+                    mostrarasientos();
+                    while (sector >= 6 | sector <= 0)
+                    {
+                        Console.Write("Ingrese el sector que desea comprar: "); sector = int.Parse(Console.ReadLine());
+                    }
+                    switchsector(sector);
+                    while (entradas > contador | entradas <= 0)
+                    {
+                        Console.Write("¿Cuántas entradas desea comprar? (Máximo " + contador + " entradas) "); entradas = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+                    }
+                    contador = contador - entradas;
+                    asientos(entradas);
+                    Console.WriteLine(" ");
+                    pago(zona, sector, entradas);
+                    break;
+                case 3:
+                    Console.WriteLine("Usted ha escogido la zona 3 \n");
+                    Console.WriteLine("La lista de precios para esta zona es: \n");
+                    Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $7.50"); Console.WriteLine("Sector 3 ............ $10.00"); Console.WriteLine("Sector 2 ............ $12.50"); Console.WriteLine("Sector 1 ............ $15.00 \n");
+                    mostrarasientos();
+                    while (sector >= 6 | sector <= 0)
+                    {
+                        Console.Write("Ingrese el sector que desea comprar: "); sector = int.Parse(Console.ReadLine());
+                    }
+                    switchsector(sector);
+                    while (entradas > contador | entradas <= 0)
+                    {
+                        Console.Write("¿Cuántas entradas desea comprar? (Máximo " + contador + " entradas) "); entradas = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+                    }
+                    contador = contador - entradas;
+                    asientos(entradas);
+                    Console.WriteLine(" ");
+                    pago(zona, sector, entradas);
+                    break;
+                case 4:
+                    Console.WriteLine("Usted ha escogido la zona 4 \n");
+                    Console.WriteLine("La lista de precios para esta zona es: \n");
+                    Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $10.00"); Console.WriteLine("Sector 3 ............ $15.00"); Console.WriteLine("Sector 2 ............ $20.00"); Console.WriteLine("Sector 1 ............ $25.00 \n");
+                    mostrarasientos();
+                    while (sector >= 6 | sector <= 0)
+                    {
+                        Console.Write("Ingrese el sector que desea comprar: "); sector = int.Parse(Console.ReadLine());
+                    }
+                    switchsector(sector);
+                    while (entradas > contador | entradas <= 0)
+                    {
+                        Console.Write("¿Cuántas entradas desea comprar? (Máximo " + contador + " entradas) "); entradas = int.Parse(Console.ReadLine()); Console.WriteLine(" ");
+                    }
+                    contador = contador - entradas;
+                    asientos(entradas);
+                    Console.WriteLine(" ");
+                    pago(zona, sector, entradas);
+                    break;
+            }
+            if (contador != 0)
+            {
+                Console.Write("¿Desea comprar otra entrada? "); opt = Console.ReadLine();
+                if (opt == "si")
+                {
+                    zona = 0; sector = 0; seccion = 0; entradas = 0;
+                }
+            }
         }
-        switch (zona)
+        Console.WriteLine("Gracias por comprar con nosotros, Disfrute de su partido!)"); Console.ReadKey();
+    }
+    public static void pago(int zona, int sector, int entradas)
+    {
+        double pagos = 0;
+        if (zona == 1 && sector == 1 || zona == 3 && sector == 1)
         {
-            case 1:
-                Console.WriteLine("Usted ha escogido la zona 1\n");
-                Console.WriteLine("La lista de precios para esta zona es:\n");
-                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $7.50"); Console.WriteLine("Sector 3 ............ $10.00"); Console.WriteLine("Sector 2 ............ $12.50"); Console.WriteLine("Sector 1 ............ $15.00 \n");
-                mostrarasientos();
-                Console.WriteLine(" ");
-                switchsector();
-                Console.WriteLine(" ");
-                asientos();
-                break;
-            case 2:
-                Console.WriteLine("Usted ha escogido la zona 2 \n");
-                Console.WriteLine("La lista de precios para esta zona es: \n");
-                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $10.00"); Console.WriteLine("Sector 3 ............ $15.00"); Console.WriteLine("Sector 2 ............ $20.00"); Console.WriteLine("Sector 1 ............ $25.00 \n");
-                mostrarasientos();
-                Console.WriteLine(" ");
-                switchsector();
-                Console.WriteLine(" ");
-                asientos();
-                break;
-            case 3:
-                Console.WriteLine("Usted ha escogido la zona 3 \n");
-                Console.WriteLine("La lista de precios para esta zona es: \n");
-                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $7.50"); Console.WriteLine("Sector 3 ............ $10.00"); Console.WriteLine("Sector 2 ............ $12.50"); Console.WriteLine("Sector 1 ............ $15.00 \n");
-                mostrarasientos();
-                Console.WriteLine(" ");
-                switchsector();
-                Console.WriteLine(" ");
-                asientos();
-                break;
-            case 4:
-                Console.WriteLine("Usted ha escogido la zona 4 \n");
-                Console.WriteLine("La lista de precios para esta zona es: \n");
-                Console.WriteLine("Sector 5 ............ $5.00"); Console.WriteLine("Sector 4 ............ $10.00"); Console.WriteLine("Sector 3 ............ $15.00"); Console.WriteLine("Sector 2 ............ $20.00"); Console.WriteLine("Sector 1 ............ $25.00 \n");
-                mostrarasientos();
-                Console.WriteLine(" ");
-                switchsector();
-                Console.WriteLine(" ");
-                asientos();
-                break;
+            pagos = entradas * 15;
         }
+        if (zona == 1 && sector == 2 || zona == 3 && sector == 2)
+        {
+            pagos = entradas * 12.50;
+        }
+        if (zona == 1 && sector == 3 || zona == 3 && sector == 3)
+        {
+            pagos = entradas * 10;
+        }
+        if (zona == 1 && sector == 4 || zona == 3 && sector == 4)
+        {
+            pagos = entradas * 7.50;
+        }
+        if (zona == 1 && sector == 5 || zona == 3 && sector == 5 || zona == 2 && sector == 5 || zona == 4 && sector == 5)
+        {
+            pagos = entradas * 5;
+        }
+        if (zona == 2 && sector == 1 || zona == 4 && sector == 1)
+        {
+            pagos = entradas * 25;
+        }
+        if (zona == 2 && sector == 2 || zona == 4 && sector == 2)
+        {
+            pagos = entradas * 20;
+        }
+        if (zona == 2 && sector == 3 || zona == 4 && sector == 3)
+        {
+            pagos = entradas * 15;
+        }
+        if (zona == 2 && sector == 4 || zona == 4 && sector == 4)
+        {
+            pagos = entradas * 10;
+        }
+        Console.WriteLine("Usted debe pagar $" + pagos);
+        Console.WriteLine("");
     }
 }
