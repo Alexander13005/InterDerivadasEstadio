@@ -127,8 +127,7 @@
     public static void Main(string[] args)
     {
         string opt = "si";  
-        int zona = 0; int sector = 0; int seccion = 0; int  entradas = 0; int contador = 5; int f, c; int cvv = 0; int sele_1 = 0;
-        double tarjeta = 0.0;
+        int zona = 0; int sector = 0; int seccion = 0; int  entradas = 0; int contador = 5; int f, c;
         while (opt == "si" && contador != 0)
         {
             Console.WriteLine("Bienvenido al Derivadas Arena \n"); Console.WriteLine("Está comprando entradas para el partido Inter Derivadas vs Integrales FC \n"); Console.WriteLine("Día del partido: Sábado 8 de junio     Hora: 6:00 pm \n");
@@ -178,6 +177,7 @@
                     asientos(entradas);
                     Console.WriteLine(" ");
                     pago(zona, sector, entradas);
+                    metodo_pago();
                     break;
                 case 2:
                     Console.WriteLine("Usted ha escogido la zona 2 \n");
@@ -197,6 +197,7 @@
                     asientos(entradas);
                     Console.WriteLine(" ");
                     pago(zona, sector, entradas);
+                    metodo_pago();
                     break;
                 case 3:
                     Console.WriteLine("Usted ha escogido la zona 3 \n");
@@ -216,6 +217,7 @@
                     asientos(entradas);
                     Console.WriteLine(" ");
                     pago(zona, sector, entradas);
+                    metodo_pago();
                     break;
                 case 4:
                     Console.WriteLine("Usted ha escogido la zona 4 \n");
@@ -235,6 +237,7 @@
                     asientos(entradas);
                     Console.WriteLine(" ");
                     pago(zona, sector, entradas);
+                    metodo_pago();
                     break;
             }
             if (contador != 0)
@@ -245,46 +248,6 @@
                     zona = 0; sector = 0; seccion = 0; entradas = 0;
                 }
             }
-        }
-        Console.WriteLine("El pago puede ser realizado con tarjeta de credito o debito\n"); Console.WriteLine("Realizara el pago con tarjeta:  ||  Visa (1) ||  Mastercard (2)  ||  AmericanExpress (3)  ||"); sele_1 = int.Parse(Console.ReadLine());
-        switch (sele_1)
-        {
-            case 1:
-                while (tarjeta <= 999999999999999 | tarjeta >= 10000000000000000)
-                {
-                    Console.WriteLine("Ingrese el numero de su tarjeta Visa");
-                    tarjeta = double.Parse(Console.ReadLine());
-                }
-                while (cvv <= 99 | cvv >= 1000)
-                {
-                    Console.WriteLine("Ingrese el CVV de su tarjeta Visa");
-                    cvv = int.Parse(Console.ReadLine());
-                }
-                break;
-            case 2:
-                while (tarjeta <= 999999999999999 | tarjeta >= 10000000000000000)
-                {
-                    Console.WriteLine("Ingrese el numero de su tarjeta MasterCard");
-                    tarjeta = double.Parse(Console.ReadLine());
-                }
-                while (cvv <= 99 | cvv >= 1000)
-                {
-                    Console.WriteLine("Ingrese el CVV de su tarjeta MasterCard");
-                    cvv = int.Parse(Console.ReadLine());
-                }
-                break;
-            case 3:
-                while (tarjeta <= 99999999999999 | tarjeta >= 1000000000000000)
-                {
-                    Console.WriteLine("Ingrese el numero de su tarjeta American Express");
-                    tarjeta = double.Parse(Console.ReadLine());
-                }
-                while (cvv <= 999 | cvv >= 10000)
-                {
-                    Console.WriteLine("Ingrese el CVV de su tarjeta American Express");
-                    cvv = int.Parse(Console.ReadLine());
-                }
-                break;
         }
         Console.WriteLine("Gracias por comprar con nosotros, Disfrute de su partido!)"); Console.ReadKey();
     }
@@ -329,5 +292,52 @@
         }
         Console.WriteLine("Usted debe pagar $" + pagos);
         Console.WriteLine("");
+    }
+    public static void metodo_pago(int cvv=0, int sele_1=0, double tarjeta=0)
+    {
+        Console.WriteLine(" ");
+        Console.WriteLine("El pago puede ser realizado con tarjeta de credito o debito\n"); Console.WriteLine("Realizara el pago con tarjeta:  ||  Visa (1) ||  Mastercard (2)  ||  AmericanExpress (3)  ||"); sele_1 = int.Parse(Console.ReadLine());
+        switch (sele_1)
+        {
+            case 1:
+                while (tarjeta <= 999999999999999 | tarjeta >= 10000000000000000)
+                {
+                    Console.WriteLine("Ingrese el numero de su tarjeta Visa");
+                    tarjeta = double.Parse(Console.ReadLine());
+                }
+                while (cvv <= 99 | cvv >= 1000)
+                {
+                    Console.WriteLine("Ingrese el CVV de su tarjeta Visa");
+                    cvv = int.Parse(Console.ReadLine());
+                }
+                break;
+            case 2:
+                while (tarjeta <= 999999999999999 | tarjeta >= 10000000000000000)
+                {
+                    Console.WriteLine("Ingrese el numero de su tarjeta MasterCard");
+                    tarjeta = double.Parse(Console.ReadLine());
+                }
+                while (cvv <= 99 | cvv >= 1000)
+                {
+                    Console.WriteLine("Ingrese el CVV de su tarjeta MasterCard");
+                    cvv = int.Parse(Console.ReadLine());
+                }
+                break;
+            case 3:
+                while (tarjeta <= 99999999999999 | tarjeta >= 1000000000000000)
+                {
+                    Console.WriteLine("Ingrese el numero de su tarjeta American Express");
+                    tarjeta = double.Parse(Console.ReadLine());
+                }
+                while (cvv <= 999 | cvv >= 10000)
+                {
+                    Console.WriteLine("Ingrese el CVV de su tarjeta American Express");
+                    cvv = int.Parse(Console.ReadLine());
+                }
+                break;
+        }
+        Console.WriteLine();
+        Console.WriteLine("La transaccion se ha realizado con exito!!!");
+        Console.WriteLine();
     }
 }
