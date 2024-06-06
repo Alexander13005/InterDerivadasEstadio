@@ -3,7 +3,7 @@
     static void asientos(int entradas)
     {
         Random a = new Random();
-        int num = a.Next(0, 2); int num1 = a.Next(0, 2); int num2 = a.Next(0, 2); int num3 = a.Next(0, 2); int num4 = a.Next(0, 2); int num5 = a.Next(0, 2);
+        int num = a.Next(0, 2); 
         int[,] asientos = new int[5, 10];
         int f = 100, c = 100, ent1 = 0;
         asientos[0, 0] = num; num = a.Next(0, 2); asientos[0, 1] = num; num = a.Next(0, 2); asientos[0, 2] = num; num = a.Next(0, 2); asientos[0, 3] = num; num = a.Next(0, 2); asientos[0, 4] = num; num = a.Next(0, 2); asientos[0, 5] = num; num = a.Next(0, 2); asientos[0, 6] = num; num = a.Next(0, 2); asientos[0, 7] = num; num = a.Next(0, 2); asientos[0, 8] = num; num = a.Next(0, 2); asientos[0, 9] = num; num = a.Next(0, 2);
@@ -293,51 +293,50 @@
         Console.WriteLine("Usted debe pagar $" + pagos);
         Console.WriteLine("");
     }
-    public static void metodo_pago(int cvv=0, int sele_1=0, double tarjeta=0)
+    public static void metodo_pago()
     {
-        Console.WriteLine(" ");
-        Console.WriteLine("El pago puede ser realizado con tarjeta de credito o debito\n"); Console.WriteLine("Realizara el pago con tarjeta:  ||  Visa (1) ||  Mastercard (2)  ||  AmericanExpress (3)  ||"); sele_1 = int.Parse(Console.ReadLine());
+        int cvv = 0, sele_1 = 0;
+        double tarjeta = 0;
+        Console.WriteLine("\nEl pago puede ser realizado con tarjeta de credito o debito\n"); Console.WriteLine("Realizara el pago con tarjeta:  ||  Visa (1) ||  Mastercard (2)  ||  AmericanExpress (3)  ||"); sele_1 = int.Parse(Console.ReadLine());
         switch (sele_1)
         {
             case 1:
                 while (tarjeta <= 999999999999999 | tarjeta >= 10000000000000000)
                 {
-                    Console.WriteLine("Ingrese el numero de su tarjeta Visa");
+                    Console.WriteLine("\nIngrese el numero de su tarjeta Visa");
                     tarjeta = double.Parse(Console.ReadLine());
                 }
                 while (cvv <= 99 | cvv >= 1000)
                 {
-                    Console.WriteLine("Ingrese el CVV de su tarjeta Visa");
+                    Console.WriteLine("\nIngrese el CVV de su tarjeta Visa");
                     cvv = int.Parse(Console.ReadLine());
                 }
                 break;
             case 2:
                 while (tarjeta <= 999999999999999 | tarjeta >= 10000000000000000)
                 {
-                    Console.WriteLine("Ingrese el numero de su tarjeta MasterCard");
+                    Console.WriteLine("\nIngrese el numero de su tarjeta MasterCard");
                     tarjeta = double.Parse(Console.ReadLine());
                 }
                 while (cvv <= 99 | cvv >= 1000)
                 {
-                    Console.WriteLine("Ingrese el CVV de su tarjeta MasterCard");
+                    Console.WriteLine("\nIngrese el CVV de su tarjeta MasterCard");
                     cvv = int.Parse(Console.ReadLine());
                 }
                 break;
             case 3:
                 while (tarjeta <= 99999999999999 | tarjeta >= 1000000000000000)
                 {
-                    Console.WriteLine("Ingrese el numero de su tarjeta American Express");
+                    Console.WriteLine("\nIngrese el numero de su tarjeta American Express");
                     tarjeta = double.Parse(Console.ReadLine());
                 }
                 while (cvv <= 999 | cvv >= 10000)
                 {
-                    Console.WriteLine("Ingrese el CVV de su tarjeta American Express");
+                    Console.WriteLine("\nIngrese el CVV de su tarjeta American Express");
                     cvv = int.Parse(Console.ReadLine());
                 }
                 break;
         }
-        Console.WriteLine();
-        Console.WriteLine("La transaccion se ha realizado con exito!!!");
-        Console.WriteLine();
+        Console.WriteLine("\nLa transaccion se ha realizado con exito!!! \n");
     }
 }
